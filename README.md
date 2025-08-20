@@ -1,50 +1,54 @@
-Hospital SQL Analytics 🏥
+# 🏥 Hospital SQL Analytics
 
-End-to-end SQL analytics project for hospital operations — schema design, ETL, data quality, indexes, KPIs, and visualization-ready outputs.
+This project demonstrates **SQL for healthcare analytics** using the [Hospital Management Dataset (Kaggle)](https://www.kaggle.com/datasets/kanakbaghel/hospital-management-dataset).  
+It showcases **end-to-end data engineering & analytics** skills: schema design, ETL, quality checks, indexing, and business insights.
 
-📌 Project Overview
+---
 
-This project simulates a hospital database and applies SQL analytics to answer key business questions.
-It demonstrates data engineering (ETL), modeling, analytics, and documentation.
+## 📂 Project Overview
 
-Designed a relational schema (patients, doctors, appointments, treatments, billing).
+This project simulates a hospital database and applies SQL analytics to answer key business questions. It demonstrates data engineering (ETL), modeling, analytics, and documentation.
 
-Built staging → transform → final tables pipeline.
+- Designed a relational schema (patients, doctors, appointments, treatments, billing).
 
-Implemented data quality checks.
+- Built staging → transform → final tables pipeline.
 
-Added indexes for query performance.
+- Implemented data quality checks.
 
-Developed analytics queries (appointments, revenue, no-shows, patient LTV).
+- Added indexes for query performance.
 
-Created views & materialized views for reuse.
+- Developed analytics queries (appointments, revenue, no-shows, patient LTV).
 
-Exported sample outputs for reproducibility.
+- Created views & materialized views for reuse.
 
-🗂 Repository Structure
-hospital-sql-analytics/
-├── sql/                  # All SQL scripts
-│   ├── 01_schema.sql
-│   ├── 02_staging.sql
-│   ├── 03_transform.sql
-│   ├── 04_quality.sql
-│   ├── 05_indexes.sql
-│   ├── 06_analytics.sql
-│   └── 07_views_mat.sql
-├── sample_outputs/        # CSV snapshots of queries
-│   ├── daily_appointments.csv
-│   ├── lead_time_summary.csv
-│   ├── no_show_heatmap.csv
-│   ├── daily_collections.csv
-│   ├── monthly_revenue_by_specialty.csv
-│   └── patient_ltv.csv
-├── docs/
-│   ├── ERD.png            # Entity-Relationship Diagram
-│   └── SETUP_pgadmin.md   # Setup & troubleshooting guide
-├── img/                   # Optional charts for README
-└── README.md              # You are here
+- Exported sample outputs for reproducibility.
 
-🏗 Entity Relationship Diagram (ERD)
+## 🗂 Repository Structure
+
+hospital-sql-analytics/\
+├── sql/                  # All SQL scripts\
+│   ├── 01_schema.sql\
+│   ├── 02_staging.sql\
+│   ├── 03_transform.sql\
+│   ├── 04_quality.sql\
+│   ├── 05_indexes.sql\
+│   ├── 06_analytics.sql\
+│   └── 07_views_mat.sql\
+├── sample_outputs/        # CSV snapshots of queries\
+│   ├── daily_appointments.csv\
+│   ├── lead_time_summary.csv\
+│   ├── no_show_heatmap.csv\
+│   ├── daily_collections.csv\
+│   ├── monthly_revenue_by_specialty.csv\
+│   └── patient_ltv.csv\
+├── docs/\
+│   ├── ERD.png            # Entity-Relationship Diagram\
+│   └── SETUP_pgadmin.md   # Setup & troubleshooting guide\
+├── img/                   # Optional charts for README\
+└── README.md              # You are here\
+
+## 🏗 Entity Relationship Diagram (ERD)
+
 ```mermaid
 erDiagram
   PATIENTS ||--o{ APPOINTMENTS : has
@@ -105,30 +109,30 @@ erDiagram
     TEXT payment_status
   }
 ```
-📊 Key Analytics Queries
+## 📊 Key Analytics Queries
 
-Daily Appointments → hospital load tracking
+1. Daily Appointments → hospital load tracking
 
-Lead Time Analysis → avg hours between booking & appointment
+2. Lead Time Analysis → avg hours between booking & appointment
 
-No-show Heatmap → missed appointments by weekday/hour
+3. No-show Heatmap → missed appointments by weekday/hour
 
-Daily Collections → cash inflow trend
+4. Daily Collections → cash inflow trend
 
-Monthly Revenue by Specialty → service line performance
+5. Monthly Revenue by Specialty → service line performance
 
-Patient Lifetime Value (LTV) → revenue per patient
+6. Patient Lifetime Value (LTV) → revenue per patient
 
 Sample outputs are saved in /sample_outputs.
 
-🚀 Setup & Reproduce
+## 🚀 Setup & Reproduce
 
 Follow docs/SETUP_pgadmin.md
  for step-by-step instructions.
 
-🔎 Example Results
+## 🔎 Example Results
 
-📈 Daily Appointments (Query A)
+#### 📈 Daily Appointments (Query A)
 (from sample_outputs/daily_appointments.csv)
 
 appointment_date	total_appointments
@@ -136,32 +140,33 @@ appointment_date	total_appointments
 2023-01-02	11
 2023-01-03	18
 
-💰 Monthly Revenue by Specialty (Query E)
+#### 💰 Monthly Revenue by Specialty (Query E)
 
 month	specialty	revenue
 2023-01	Cardiology	12500.00
 2023-01	Pediatrics	8450.00
-✅ Skills Demonstrated
 
-SQL Engineering: schema, staging, transforms
+## ✅ Skills Demonstrated
 
-Data Quality: referential integrity, null checks
+- SQL Engineering: schema, staging, transforms
 
-Performance: indexing, EXPLAIN plans
+- Data Quality: referential integrity, null checks
 
-Analytics: KPIs, trends, LTV
+- Performance: indexing, EXPLAIN plans
 
-Documentation: ERD, setup guide, outputs, README
+- Analytics: KPIs, trends, LTV
 
-📌 Next Steps (Optional Enhancements)
+- Documentation: ERD, setup guide, outputs, README
 
-Automate ETL with Airflow or dbt
+## 📌 Next Steps (Optional Enhancements)
 
-Dashboarding in Power BI / Tableau
+- Automate ETL with Airflow or dbt
 
-Add synthetic patient demographics for richer analysis
+- Dashboarding in Power BI / Tableau
 
-👤 Author
+- Add synthetic patient demographics for richer analysis
+
+## 👤 Author
 
 Varun Singh
 Master’s in Engineering Management, Purdue University
